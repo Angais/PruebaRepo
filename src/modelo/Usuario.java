@@ -27,6 +27,7 @@ public class Usuario implements Serializable {
     }
 
     public void setPassword(String pass) {
+        //Encripta la contraseña con una función auxiliar y la guarda
         for (int i = 0; i < pass.length(); i++) {
             int c = pass.charAt(i);
             password.add((byte) encriptar(c));

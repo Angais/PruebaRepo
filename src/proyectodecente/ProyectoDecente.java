@@ -28,7 +28,7 @@ public class ProyectoDecente extends Application{
         Parent root = FXMLLoader.load(getClass().getResource("../vistas/ventanaUsuarios.fxml"));
         
         Scene escena = new Scene(root, 400, 600);
-        ventana.setTitle("Gestión de Usuarios");
+        ventana.setTitle("Gestión de Usuarios - Básico");
         ventana.setScene(escena);
         ventana.show();
 
