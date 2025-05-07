@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controladores.VentanaUsuariosController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="400.0" AnchorPane.bottomAnchor="104.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="94.0" layoutY="14.0" text="Gestión de Usuarios">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="173.0" layoutY="79.0" text="Usuario" textAlignment="CENTER" />
+            <TextField fx:id="tfUsuario" layoutX="119.0" layoutY="106.0" promptText="Introduzca el usuario" />
+            <Label alignment="CENTER" layoutX="163.0" layoutY="151.0" text="Contraseña" textAlignment="CENTER" />
+            <PasswordField fx:id="pw1" layoutX="120.0" layoutY="176.0" promptText="Introduzca la contraseña" />
+            <Label alignment="CENTER" layoutX="157.0" layoutY="221.0" text="Confirmación" textAlignment="CENTER" />
+            <PasswordField fx:id="pw2" layoutX="120.0" layoutY="246.0" promptText="Confirme la contraseña" />
+            <CheckBox fx:id="cbVer" layoutX="283.0" layoutY="250.0" mnemonicParsing="false" text="Ver" />
+            <CheckBox fx:id="cbAdmin" layoutX="146.0" layoutY="292.0" mnemonicParsing="false" text="Administrador" />
+            <Button layoutX="60.0" layoutY="339.0" mnemonicParsing="false" onAction="#btnAceptarClick" text="Aceptar" />
+            <Button layoutX="163.0" layoutY="339.0" mnemonicParsing="false" onAction="#btnEliminarClick" text="Eliminar" />
+            <Button layoutX="264.0" layoutY="339.0" mnemonicParsing="false" onAction="#btnComprobarClick" text="Comprobar" />
+            <TextField fx:id="tfPw1" layoutX="120.0" layoutY="176.0" promptText="Introduzca la contraseña" />
+            <TextField fx:id="tfPw2" layoutX="120.0" layoutY="246.0" promptText="Confirme la contraseña" />
+         </children>
+      </Pane>
+      <VBox layoutY="399.0" prefHeight="200.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <TableView fx:id="tbUsuarios" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="clIdUsuario" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="clUsuario" prefWidth="75.0" text="Usuario" />
+                  <TableColumn fx:id="clAdmin" prefWidth="75.0" text="Admin" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
